@@ -1,0 +1,223 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.wrapper {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.7;
+  color: #fff;
+  background-image: linear-gradient(196deg, #f1a9a9, #e66767);
+  min-height: 100vh;
+  overflow-x: none;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.container {
+  position: relative;
+  max-width: calc(100% - 40px);
+  min-width: 860px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 100px 0;
+  justify-content: center;
+}
+.chair {
+  width: 500px;
+  height: 410px;
+  display: inline-block;
+  z-index: 9;
+  transition: all 550ms linear;
+  transition-delay: 100ms;
+  background-position: center top;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-image: url("./images/chair1.png");
+  opacity: 1;
+}
+.product{
+    max-width: 360px;
+}
+.category {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 13px;
+  line-height: 1.2;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+.product-name {
+  font-weight: 800;
+  font-size: 34px;
+  line-height: 1.2;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.price {
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 1.2;
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+.orig-price {
+  text-decoration: line-through;
+  font-size: 20px;
+  opacity: 0.6;
+  padding-left: 15px;
+}
+.icon {
+  padding-right: 7px;
+  font-size: 20px;
+}
+.add-to-cart {
+  position: relative;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 2;
+  height: 48px;
+  border-radius: 4px;
+  width: 210px;
+  letter-spacing: 1px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  background-color: transparent;
+  color: #fff;
+  box-shadow: 0 6px 15px 0 rgba(16, 39, 112, 0.15);
+  transition: all 250ms linear;
+  text-decoration: none;
+  margin-top: 50px;
+  background-color: #944852;
+}
+.add-to-cart:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  color: #fff;
+  height: 100%;
+  content: "";
+  z-index: -1;
+  transition: background-color 250ms 300ms ease;
+}
+.add-to-cart:hover {
+  box-shadow: 0 12px 35px 0 rgba(16, 39, 112, 0.25);
+  background-color: #333;
+}
+.add-to-cart a {
+  color: #fff;
+}
+[type="radio"]:checked,
+[type="radio"]:not(:checked) {
+  position: absolute;
+  visibility: hidden;
+}
+.colors {
+  padding-top: 20px;
+  display: flex;
+  gap: 10px;
+}
+.color-btn:checked + label,
+.color-btn:not(:checked) + label {
+  height: 40px;
+  transition: all 200ms linear;
+  border-radius: 4px;
+  width: 40px;
+  overflow: hidden;
+  border: none;
+  display: block;
+  cursor: pointer;
+  color: #ffeba7;
+  box-shadow: 0 12px 35px 0 rgba(16, 39, 112, 0.25);
+  z-index: 10;
+  background-size: cover;
+  border: 3px solid transparent;
+}
+.color-btn:checked + label {
+  border-color: #434343;
+  transform: scale(1.1);
+}
+label.first-color {
+  background-image: url("./images/color1.jpg");
+}
+label.color-2 {
+  background-image: url("./images/color2.jpg");
+}
+label.color-3 {
+  background-image: url("./images/color3.jpg");
+}
+label.color-4 {
+  background-image: url("./images/color4.jpg");
+}
+label.color-5 {
+  background-image: url("./images/color5.jpg");
+}
+label.color-6 {
+  background-image: url("./images/color6.jpg");
+}
+
+.for-color-1:checked ~ .chair {
+  background-image: url("./images/chair1.png");
+  opacity: 1;
+  animation: shake 0.7s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
+.for-color-2:checked ~ .chair {
+  background-image: url("./images/chair2.png");
+  opacity: 1;
+  animation: shake 0.7s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
+.for-color-3:checked ~ .chair {
+  background-image: url("./images/chair3.png");
+  opacity: 1;
+  animation: shake 0.7s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
+.for-color-4:checked~ .chair {
+  background-image: url("./images/chair4.png");
+  opacity: 1;
+  animation: shake 0.7s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
+.for-color-5:checked~.chair {
+  background-image: url("./images/chair5.png");
+  opacity: 1;
+  animation: shake 0.7s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
+.for-color-6:checked~ .chair {
+  background-image: url("./images/chair6.png");
+  opacity: 1;
+  animation: shake 0.7s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
+
+@keyframes shake {
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0) rotate(-1deg);
+  }
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0) rotate(2deg);
+  }
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-3px, 0, 0) rotate(-3deg);
+  }
+  40%,
+  60% {
+    transform: translate3d(3px, 0, 0) rotate(3deg);
+  }
+} 
